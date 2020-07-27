@@ -1,5 +1,15 @@
 {
   "semi": true,
   "printWidth": 80,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "overrides": [
+    {
+      "files": "*.pug",
+      "options": {
+        "parser": "pug",
+        "bracketSpacing": false
+      }
+    }
+  ]
 }
