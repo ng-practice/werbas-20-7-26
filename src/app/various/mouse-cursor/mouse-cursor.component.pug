@@ -1,0 +1,4 @@
+.card
+  .card-header
+    | X: {{ x }} Y: {{ y }}
+  .card-body((mousemove)="updateCoordinates($event)", style="height:500px")
