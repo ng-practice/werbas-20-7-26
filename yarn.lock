@@ -1082,13 +1082,6 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@prettier/plugin-pug@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-pug/-/plugin-pug-1.5.0.tgz#3d7208eb95781dab38d0daf7a25d550ec678e9f1"
-  integrity sha512-VdXe7R5hIKkW7KOmyCocJHXwNY0WwBGzM4QfdGEWLa0uxN3g/wmSmLqtCBLTcLtLCH4qULWdWwiQW2rl6UFE1Q==
-  dependencies:
-    pug-lexer "~5.0.0"
-
 "@schematics/angular@10.0.4":
   version "10.0.4"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-10.0.4.tgz#5a84fe6f4e8d8e4e7e2925c05b7689f70dab597f"
@@ -1900,6 +1893,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bootstrap@^5.0.0-alpha1:
+  version "5.0.0-alpha1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.0-alpha1.tgz#cd35be4282bc930322bcbf1db23a8729c60a31cb"
+  integrity sha512-iwKneP2pLXl8lN0YpnOuOARiNPTzmh/4cw+Un86u4OqrMLuQpyMC7nO07hvivvcg0B/ektJPjuPnS1s+YmRK9A==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -6858,7 +6856,7 @@ pug-filters@^4.0.0:
     pug-walk "^2.0.0"
     resolve "^1.15.1"
 
-pug-lexer@^5.0.0, pug-lexer@~5.0.0:
+pug-lexer@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-5.0.0.tgz#0b779e7d8cbf0f103803675be96351942fd9a727"
   integrity sha512-52xMk8nNpuyQ/M2wjZBN5gXQLIylaGkAoTk5Y1pBhVqaopaoj8Z0iVzpbFZAqitL4RHNVDZRnJDsqEYe99Ti0A==
