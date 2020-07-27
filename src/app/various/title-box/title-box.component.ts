@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'ws-title-box',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleBoxComponent {
   @Input() title: string;
+  @Output() titleClick = new EventEmitter<string>();
+
+  emitTitleClick(): void {
+    this.titleClick.emit('Title clicked');
+  }
 }
