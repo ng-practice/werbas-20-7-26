@@ -1,5 +1,7 @@
+mixin navItem(path, title, className)
+  li
+    a(href=path, class=className) #{title}
+
 ul
-  li
-   a.active(href='#books') Books
-  li
-   a(href='#about') About
+  +navItem('#books', 'Books', 'active')
+  +navItem('#about', 'About')
