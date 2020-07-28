@@ -11,6 +11,10 @@ export class BookListComponent {
   books: Book[];
 
   constructor(private bookApi: BookApi) {
-    this.bookApi.getBooks().subscribe(books => (this.books = books));
+    this.bookApi.getBooks().subscribe(
+      booksFromApi => (this.books = booksFromApi),
+      err => {},
+      () => console.info('FERTSCH')
+    );
   }
 }

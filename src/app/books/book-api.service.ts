@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { interval, Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
 import { Book } from './book';
 
 @Injectable({ providedIn: 'root' })
@@ -20,6 +21,9 @@ export class BookApi {
   ];
 
   getBooks(): Observable<Book[]> {
-    return of(this.#books);
+    return interval(500).pipe(
+      map(() => this.#books),
+      take(4)
+    );
   }
 }
