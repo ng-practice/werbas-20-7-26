@@ -15,11 +15,9 @@ export class BookListComponent implements OnInit, OnDestroy {
   constructor(private bookApi: BookApi) {}
 
   ngOnInit(): void {
-    this.#subscription = this.bookApi.getBooks().subscribe(
-      booksFromApi => (this.books = booksFromApi),
-      err => {},
-      () => console.info('FERTSCH')
-    );
+    this.#subscription = this.bookApi
+      .getBooks()
+      .subscribe(booksFromApi => (this.books = booksFromApi));
   }
 
   ngOnDestroy(): void {
