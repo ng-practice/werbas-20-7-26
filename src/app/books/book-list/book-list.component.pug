@@ -2,5 +2,6 @@
   | No books available
 
 .card(*ngFor='let book of books')
+  img.card-img-top([src]='book.cover')
   .card-header {{ book.title }}
   .card-body {{ book.subtitle }}
