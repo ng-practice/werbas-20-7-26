@@ -1,3 +1,6 @@
-.card(*ngFor="let book of books")
+.alert.alert-primary(*ngIf='books?.length === 0')
+  | No books available
+
+.card(*ngFor='let book of books')
   .card-header {{ book.title }}
   .card-body {{ book.subtitle }}
