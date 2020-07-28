@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from '../book';
 import { BookApi } from '../book-api.service';
+
 @Component({
   selector: 'ws-book-list',
   templateUrl: './book-list.component.pug',
