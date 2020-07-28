@@ -11,6 +11,6 @@ export class BookListComponent {
   books: Book[];
 
   constructor(private bookApi: BookApi) {
-    this.books = this.bookApi.getBooks();
+    this.bookApi.getBooks().subscribe(books => (this.books = books));
   }
 }
