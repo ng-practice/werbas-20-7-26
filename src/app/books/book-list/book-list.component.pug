@@ -4,12 +4,13 @@ ng-container(*ngIf='books | async as booksCollection; else errorTemplate')
 
   .alert.alert-default {{ booksCollection.length }}
 
-  .card(*ngFor='let book of booksCollection')
-    img.card-img-top([src]='book.cover')
-    .card-header {{ book.title }}
-    .card-body
-      .card-text {{ book.subtitle }}
-      a.btn.btn-primary([routerLink]='[book.isbn]') Details
+  .card-group
+    .card(*ngFor='let book of booksCollection')
+      img.card-img-top([src]='book.cover')
+      .card-header {{ book.title }}
+      .card-body
+        .card-text {{ book.subtitle }}
+        a.btn.btn-primary([routerLink]='[book.isbn]') Details
 
 ng-template(#errorTemplate)
   | Error occurred
