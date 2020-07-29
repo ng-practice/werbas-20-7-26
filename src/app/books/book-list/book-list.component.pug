@@ -1,7 +1,13 @@
-.alert.alert-primary(*ngIf='books?.length === 0')
-  | No books available
+ng-container(*ngIf='books | async as booksCollection; else errorTemplate')
+  .alert.alert-primary(*ngIf='booksCollection.length === 0')
+    | No books available
 
-.card(*ngFor='let book of books')
-  img.card-img-top([src]='book.cover')
-  .card-header {{ book.title }}
-  .card-body {{ book.subtitle }}
+  .alert.alert-default {{ booksCollection.length }}
+
+  .card(*ngFor='let book of booksCollection')
+    img.card-img-top([src]='book.cover')
+    .card-header {{ book.title }}
+    .card-body {{ book.subtitle }}
+
+ng-template(#errorTemplate)
+  | Error occurred
