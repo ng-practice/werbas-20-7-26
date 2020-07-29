@@ -1,5 +1,15 @@
 a(routerLink='/books') Back
 
+//- Simple (not recommended)
+ng-container(*ngIf='bookScalar')
+  h2 {{ bookScalar.title }}
+    small {{ bookScalar.subtitle }}
+
+  .content
+    img.img-thumbnail([src]='bookScalar.cover')
+    span {{ bookScalar.author }}
+
+//- Advanced
 ng-container(*ngIf='book | async as bookTemplate')
   h2 {{ bookTemplate.title }}
     small {{ bookTemplate.subtitle }}
