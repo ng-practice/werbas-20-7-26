@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConfirmCanDeactivateGuard } from '../confirm-can-deactivate.guard';
+import { BookCreateComponent } from './book-create/book-create.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookListComponent } from './book-list/book-list.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
     component: BooksComponent,
     children: [
       { path: '', component: BookListComponent },
+      {
+        path: 'create',
+        component: BookCreateComponent,
+      },
       {
         path: ':isbn/edit',
         component: BookEditComponent,

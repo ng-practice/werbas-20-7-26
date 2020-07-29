@@ -1,3 +1,5 @@
+a.btn.btn-primary([routerLink]='["create"]') CREATE
+
 ng-container(*ngIf='books | async as booksCollection; else errorTemplate')
   .alert.alert-primary(*ngIf='booksCollection.length === 0')
     | No books available

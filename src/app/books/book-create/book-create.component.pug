@@ -1,0 +1,15 @@
+form([formGroup]='form', (ngSubmit)='save()')
+  .form-group
+    label ISBN
+    input.form-control(formControlName='isbn')
+  .form-group
+    label Title
+    input.form-control(formControlName='title')
+  .form-group
+    label Subtitle
+    input.form-control(formControlName='subtitle')
+  .form-group
+    label Authors
+    input.form-control(formControlName='author')
+
+  button.btn.btn-primary Save

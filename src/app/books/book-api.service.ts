@@ -17,6 +17,9 @@ export class BookApi {
     return this.http.get<Book>(`${this.endpoint}/books/${isbn}`);
   }
 
+  save(value: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.endpoint}/books`, value);
+  }
   // #books: Book[] = [
   //   {
   //     title: 'Design Patterns',
