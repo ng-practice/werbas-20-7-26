@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ConfirmCandeactivateGuard } from './confirm-candeactivate.guard';
+import { ConfirmCanDeactivateGuard } from './confirm-can-deactivate.guard';
 
 describe('ConfirmCandeactivateGuard', () => {
-  let guard: ConfirmCandeactivateGuard;
+  let guard: ConfirmCanDeactivateGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(ConfirmCandeactivateGuard);
+    guard = TestBed.inject(ConfirmCanDeactivateGuard);
   });
 
   it('should be created', () => {

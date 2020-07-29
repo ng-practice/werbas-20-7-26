@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConfirmCandeactivateGuard } from '../confirm-candeactivate.guard';
+import { ConfirmCanDeactivateGuard } from '../confirm-can-deactivate.guard';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BooksComponent } from './books/books.component';
 
@@ -12,9 +13,13 @@ const routes: Routes = [
     children: [
       { path: '', component: BookListComponent },
       {
+        path: ':isbn/edit',
+        component: BookEditComponent,
+      },
+      {
         path: ':isbn',
         component: BookDetailComponent,
-        canDeactivate: [ConfirmCandeactivateGuard],
+        canDeactivate: [ConfirmCanDeactivateGuard],
       },
     ],
   },
@@ -23,5 +28,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [ConfirmCanDeactivateGuard],
 })
 export class BooksRoutingModule {}

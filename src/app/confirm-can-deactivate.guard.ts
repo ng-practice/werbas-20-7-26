@@ -8,10 +8,8 @@ import {
 import { Observable } from 'rxjs';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class ConfirmCandeactivateGuard
+@Injectable()
+export class ConfirmCanDeactivateGuard
   implements CanDeactivate<BookDetailComponent> {
   canDeactivate(
     component: BookDetailComponent,

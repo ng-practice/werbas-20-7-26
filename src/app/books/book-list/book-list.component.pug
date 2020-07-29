@@ -10,7 +10,8 @@ ng-container(*ngIf='books | async as booksCollection; else errorTemplate')
       .card-header {{ book.title }}
       .card-body
         .card-text {{ book.subtitle }}
-        a.btn.btn-primary([routerLink]='[book.isbn]') Details
+        a.btn.btn-link([routerLink]='[book.isbn]') Details
+        a.btn.btn-link([routerLink]='[book.isbn, "edit"]') Edit
 
 ng-template(#errorTemplate)
   | Error occurred
