@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { BookListComponent } from './book-list/book-list.component';
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books/books.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 
 @NgModule({
-  declarations: [BooksComponent, BookListComponent],
+  declarations: [BooksComponent, BookListComponent, BookDetailComponent],
   imports: [CommonModule, BooksRoutingModule],
   exports: [BooksComponent, BookListComponent],
 })

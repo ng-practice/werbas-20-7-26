@@ -1,0 +1,9 @@
+a(routerLink='/books') Back
+
+ng-container(*ngIf='book | async as bookTemplate')
+  h2 {{ bookTemplate.title }}
+    small {{ bookTemplate.subtitle }}
+
+  .content
+    img.img-thumbnail([src]='bookTemplate.cover')
+    span {{ bookTemplate.author }}

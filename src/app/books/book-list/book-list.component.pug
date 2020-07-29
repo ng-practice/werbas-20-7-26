@@ -7,7 +7,9 @@ ng-container(*ngIf='books | async as booksCollection; else errorTemplate')
   .card(*ngFor='let book of booksCollection')
     img.card-img-top([src]='book.cover')
     .card-header {{ book.title }}
-    .card-body {{ book.subtitle }}
+    .card-body
+      .card-text {{ book.subtitle }}
+      a.btn.btn-primary([routerLink]='[book.isbn]') Details
 
 ng-template(#errorTemplate)
   | Error occurred
