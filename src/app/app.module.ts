@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AboutModule } from './about/about.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BooksModule } from './books/books.module';
 import { LayoutModule } from './layout/layout.module';
 import { VariousModule } from './various/various.module';
 
@@ -15,7 +14,6 @@ import { VariousModule } from './various/various.module';
     HttpClientModule,
 
     AboutModule,
-    BooksModule,
 
     LayoutModule,
     VariousModule,
